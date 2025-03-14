@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+<!--티니마-->
+      <li Class="PatchOperationSequence" MayRequire="nsns.tinimar">
+        <operations>
+ <!--graphicPaths-->
+
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/AlienRace.ThingDef_AlienRace[defName = "Tinimar_Race"]/alienRace/graphicPaths/head</xpath>
+            <value>
+			<head>
+				<path>Sleepface/Tinimar/Heads/Face/face</path>
+				<extendedGraphics>
+					<Mutant MayRequire="Ludeon.Rimworld.Anomaly" For="Shambler">head/Mutanthead</Mutant>
+					<Mutant MayRequire="Ludeon.Rimworld.Anomaly" For="Ghoul">head/Mutanthead</Mutant>
+				</extendedGraphics>
+			</head>
+            </value>
+          </li>
+<!--styleSettings-->
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/AlienRace.ThingDef_AlienRace[defName = "Tinimar_Race"]/alienRace/styleSettings</xpath>
+          	<value>
+              <styleSettings>
+                <li>
+                  <key>HairDef</key>
+                  <value>
+                    <hasStyle>false</hasStyle>
+                  </value>
+                </li>
+                <li>
+                  <key>TattooDef</key>
+                  <value>
+                    <hasStyle>false</hasStyle>
+                  </value>
+                </li>
+                <li>
+                  <key>BeardDef</key>
+                  <value>
+                    <hasStyle>false</hasStyle>
+                  </value>
+                </li>
+              </styleSettings>
+            </value>
+          </li>
+          
+<!--addon start-->
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/AlienRace.ThingDef_AlienRace[defName = "Tinimar_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons</xpath>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/AlienRace.ThingDef_AlienRace[defName = "Tinimar_Race"]/alienRace/generalSettings/alienPartGenerator</xpath>
+            <value>
+
+            <bodyAddons>
+<!--Face addon-->
+					<li>
+						<name>Face_Tinimar</name>
+						<path>Sleepface/Tinimar/Heads/Face/face</path>
+						<conditions>
+							<BodyPart>
+								<bodyPart>Head</bodyPart>
+							</BodyPart>
+							<Posture>
+								<drawnStanding>true</drawnStanding>
+								<drawnLaying>true</drawnLaying>
+								<drawnInBed>true</drawnInBed>
+							</Posture>
+							<RotStage>Fresh,Rotting</RotStage>
+						</conditions>
+						<colorChannel>skin</colorChannel>
+						<alignWithHead>true</alignWithHead>
+						<inFrontOfBody>false</inFrontOfBody>
+						<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+						<extendedGraphics>
+							<Mutant MayRequire="Ludeon.Rimworld.Anomaly" For="Shambler">Sleepface/Tinimar/Heads/Mutantface</Mutant>
+							<Mutant MayRequire="Ludeon.Rimworld.Anomaly" For="Ghoul">Sleepface/Tinimar/Heads/Mutantface</Mutant>
+						</extendedGraphics>
+						<offsets>
+						  <north>
+						    <layerOffset>-0.275</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+						  	</bodyTypes>
+						  </north>
+						  <south>
+						    <layerOffset>-0.323</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+						  	</bodyTypes>
+						  </south>
+						  <east>
+						    <layerOffset>-0.323</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+						  	</bodyTypes>
+						  </east>
+						  <west>
+						    <layerOffset>-0.323</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+						  	</bodyTypes>
+						  </west>
+						</offsets>
+					</li>
+<!--SleepFace addon-->
+					<li>
+						<name>SleepFace_Tinimar</name>
+						<path>Sleepface/Tinimar/Heads/Sleepface</path>
+						<conditions>
+							<BodyPart>
+								<bodyPart>Head</bodyPart>
+							</BodyPart>
+							<Posture>
+								<drawnStanding>false</drawnStanding>
+								<drawnLaying>true</drawnLaying>
+								<drawnInBed>true</drawnInBed>
+							</Posture>
+							<RotStage>Fresh,Rotting</RotStage>
+							<Sleeping>true</Sleeping>
+						</conditions>
+						<colorChannel>skin</colorChannel>
+						<userCustomizable>false</userCustomizable>
+						<alignWithHead>true</alignWithHead>
+						<inFrontOfBody>false</inFrontOfBody>
+						<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+						<extendedGraphics>
+							<Mutant MayRequire="Ludeon.Rimworld.Anomaly" For="Shambler">Sleepface/Tinimar/Heads/Mutantface</Mutant>
+							<Mutant MayRequire="Ludeon.Rimworld.Anomaly" For="Ghoul">Sleepface/Tinimar/Heads/Mutantface</Mutant>
+						</extendedGraphics>
+						<offsets>
+						  <north>
+						  	<layerOffset>-0.275</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+						  	</bodyTypes>
+						  </north>
+						  <south>
+						  	<layerOffset>-0.324</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+						  	</bodyTypes>
+						  </south>
+						  <east>
+						  	<layerOffset>-0.324</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+							</bodyTypes>
+						  </east>
+						  <west>
+						  	<layerOffset>-0.324</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+							</bodyTypes>
+						  </west>
+						</offsets>
+					</li>
+<!--HurtFace addon-->
+					<li>
+						<name>HurtFace_Tinimar</name>
+						<path>Sleepface/Tinimar/Heads/Hurtface</path>
+						<conditions>
+							<BodyPart>
+								<bodyPart>Head</bodyPart>
+							</BodyPart>
+							<Posture>
+								<drawnStanding>false</drawnStanding>
+								<drawnLaying>true</drawnLaying>
+								<drawnInBed>false</drawnInBed>
+							</Posture>
+							<RotStage>Fresh,Rotting</RotStage>	
+							<Job>Wait_Downed</Job>
+						</conditions>
+						<colorChannel>skin</colorChannel>
+						<userCustomizable>false</userCustomizable>
+						<alignWithHead>true</alignWithHead>
+						<inFrontOfBody>false</inFrontOfBody>
+						<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+						<extendedGraphics>
+							<Mutant MayRequire="Ludeon.Rimworld.Anomaly" For="Shambler">Sleepface/Tinimar/Heads/Mutantface</Mutant>
+							<Mutant MayRequire="Ludeon.Rimworld.Anomaly" For="Ghoul">Sleepface/Tinimar/Heads/Mutantface</Mutant>
+						</extendedGraphics>
+						<offsets>
+						  <north>
+						  	<layerOffset>-0.275</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+						  	</bodyTypes>
+						  </north>
+						  <south>
+						  	<layerOffset>-0.325</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+						  	</bodyTypes>
+						  </south>
+						  <east>
+						  	<layerOffset>-0.325</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+							</bodyTypes>
+						  </east>
+						  <west>
+						  	<layerOffset>-0.325</layerOffset>
+						  	<bodyTypes>
+						  		<Female>(0, 0)</Female>
+						  		<Thin>(0, 0)</Thin>
+							</bodyTypes>
+						  </west>
+						</offsets>
+					</li>
+<!--hair addon-->
+					<li>
+						<name>hair_Tinimar</name>
+						<path>Sleepface/Tinimar/Hairs/Hair</path>  
+						<conditions>
+							<BodyPart>
+								<bodyPart>Head</bodyPart>
+							</BodyPart>
+							<Posture>
+								<drawnStanding>true</drawnStanding>
+								<drawnLaying>true</drawnLaying>
+								<drawnInBed>true</drawnInBed>
+							</Posture>
+							<RotStage>Fresh,Rotting</RotStage>
+						</conditions>     
+						<colorChannel>hair</colorChannel>
+						<drawSize>1</drawSize>
+						<angle>0</angle>
+						<shaderType>Cutout</shaderType>
+						<alignWithHead>true</alignWithHead>     
+						<inFrontOfBody>false</inFrontOfBody>
+						<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+						<extendedGraphics>
+							<!--<Age For="HumanlikeBaby" MayRequire="Ludeon.RimWorld.Biotech">Sleepface/Tinimar/Hairs/Bald</Age>-->
+						</extendedGraphics>
+							<offsets>
+							  <north>
+							    <layerOffset>-0.274</layerOffset>
+							  </north>
+							  <south>
+							    <layerOffset>-0.326</layerOffset>
+							  </south>
+			  				<east>
+							    <layerOffset>-0.326</layerOffset>
+							  </east>
+							</offsets>
+					</li>
+            </bodyAddons>
+<!--addon end-->
+            </value>
+          </li>
+
+        </operations>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

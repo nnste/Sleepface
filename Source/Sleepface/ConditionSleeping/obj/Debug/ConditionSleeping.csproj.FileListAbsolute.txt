@@ -1,0 +1,6 @@
+C:\Users\EGG\Desktop\Sleepface\ConditionSleeping\bin\Debug\ConditionSleeping.dll
+C:\Users\EGG\Desktop\Sleepface\ConditionSleeping\bin\Debug\ConditionSleeping.pdb
+C:\Users\EGG\Desktop\Sleepface\ConditionSleeping\obj\Debug\ConditionSleeping.csprojAssemblyReference.cache
+C:\Users\EGG\Desktop\Sleepface\ConditionSleeping\obj\Debug\ConditionSleeping.csproj.CoreCompileInputs.cache
+C:\Users\EGG\Desktop\Sleepface\ConditionSleeping\obj\Debug\ConditionSleeping.dll
+C:\Users\EGG\Desktop\Sleepface\ConditionSleeping\obj\Debug\ConditionSleeping.pdb

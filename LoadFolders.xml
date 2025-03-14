@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<loadFolders>
+	<v1.5>
+		<li>/</li>
+<!--
+		<li IfModActive="another.patches">AOC</li>
+		<li IfModActive="aoba.redmoyo">RedMoyo</li>		
+		<li IfModNotActive="sutsutman.yuranrjwaddon">Moyo</li> 
+		<li IfModNotActive="마루페이셜패키지명">Maru</li> 
+		<li IfModNotActive="ancot.yuranfacialanimation">SP_Yuran</li>
+-->
+		<li IfModActive="nsns.tinimar">SP_Tinimar</li>	
+		<li IfModNotActive="ancot.dragonianfacialanimation">SP_Dragonian</li>
+		<li IfModNotActive="talos.nyaron.face.fa">SP_Nyaron</li>
+		<li IfModNotActive="hourai.rabbiefacialanimation">SP_Rabbie</li>
+		<li IfModNotActive="fxz.ratkin.facialanimation">SP_Ratkin</li>
+
+	</v1.5>
+</loadFolders>
